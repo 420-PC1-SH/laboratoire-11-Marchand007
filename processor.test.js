@@ -29,3 +29,10 @@ test("id must be type << Number >>", function ()
     let result = processor("9701::<489584872710>");
     expect(typeof result.id).toEqual("number");
 });
+
+//requis 5 (Requis : L’objet retourné devrait contenir une « rawData » comme propriété)
+test("return rawData in ojbect", function ()
+{
+    let result = processor("9701::<489584872710>");
+    expect(result.rawData).not.toEqual(undefined);
+});
